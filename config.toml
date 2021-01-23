@@ -1,4 +1,28 @@
 baseURL = "http://adwsingh.github.io"
 languageCode = "en-us"
-title = ""
+title = "adwait's blog"
 theme = "kiss"
+enableRobotsTXT = true
+
+
+[params.info]
+enableSocial = true
+homeTitle = "adwait's blog"
+related = true
+codeCopy = true
+taxonomiesCount = true
+
+[params.social]
+github = "adwsingh"
+email = "adwsingh@gmail.com"
+linkedin = "adwait-kumar-singh-b5321512a"
+facebook = "adwait.kumarsingh.1"
+
+[taxonomies]
+tag ="tags"
+
+[params.social.config]
+platforms = ["github","facebook","twitter","instagram","email","codepen","linkedin"]
+
+[params.features]
+disqusOnDemand = true
