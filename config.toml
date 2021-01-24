@@ -3,7 +3,8 @@ languageCode = "en-us"
 title = "adwait's blog"
 theme = "kiss"
 enableRobotsTXT = true
-
+copyright = "&copy; <a href=\"https://github.com/adwsingh\">Adwait Kumar Singh</a> 2021<p><small>The opinions expressed on this website are my own,<br>and are not associated with any employers, past or present.</small>"
+googleAnalytics = "G-L7XXS6WEC2"
 
 [params.info]
 enableSocial = true
@@ -17,12 +18,13 @@ github = "adwsingh"
 email = "adwsingh@gmail.com"
 linkedin = "adwait-kumar-singh-b5321512a"
 facebook = "adwait.kumarsingh.1"
+stackoverflow = "1432247/adwait-kumar"
 
 [taxonomies]
-tag ="tags"
+tag = "tags"
 
 [params.social.config]
-platforms = ["github","facebook","twitter","instagram","email","codepen","linkedin"]
+platforms = ["github", "stackoverflow", "facebook", "twitter", "instagram", "email", "codepen", "linkedin"]
 
 [params.features]
 disqusOnDemand = true
