@@ -1,0 +1,32 @@
+name: Publish site
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install hugo
+        env:
+          HUGO_VERSION: 0.80.0
+        run: |
+          echo "installing hugo"
+          sudo mkdir -p /home/hugo/
+          echo "curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar -zxf - --directory /home/hugo/"
+          curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar -zxf - --directory /home/hugo/
+          sudo mv /home/hugo/hugo /usr/bin/
+      - name: Publish
+        run: |
+          echo $PWD
+          ls
+          export HUGO_ENV='production'
+          hugo -v
+          git config --global user.email "adwsingh-blog-bot@users.noreply.github.com"
+          git config --global user.name "adwsingh-blog-bot"
+          git add public
+          git commit -m "Publish: $(date)"
+          git push
