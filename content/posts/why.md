@@ -1,5 +1,6 @@
 ---
-title: "Why? What?"
+tags: ["writing", "introspection"]
+title: "Why?"
 date: 2021-01-24T20:29:12+05:30
 draft: false
 ---

@@ -1,10 +1,11 @@
 baseURL = "http://adwsingh.github.io"
 languageCode = "en-us"
-title = "adwait's blog"
+title = "</adwsingh>"
 theme = "kiss"
 enableRobotsTXT = true
 copyright = "&copy; <a href=\"https://github.com/adwsingh\">Adwait Kumar Singh</a> 2021<p><small>The opinions expressed on this website are my own,<br>and are not associated with any employers, past or present.</small>"
 googleAnalytics = "G-L7XXS6WEC2"
+disqusShortname = "adwsingh-com"
 
 [params.info]
 enableSocial = true
@@ -24,7 +25,4 @@ stackoverflow = "1432247/adwait-kumar"
 tag = "tags"
 
 [params.social.config]
-platforms = ["github", "stackoverflow", "facebook", "twitter", "instagram", "email", "codepen", "linkedin"]
-
-[params.features]
-disqusOnDemand = true
+platforms = ["github", "stackoverflow", "facebook", "twitter", "instagram", "email", "codepen", "linkedin", "about"]
