@@ -47,7 +47,8 @@ some of which I think could be useful to others, will plan on creating a PR into
 this setup, it allows me to write blog posts in the ever favorite [Markdown](https://www.markdownguide.org/) and then
 using
 a [Github Actions](https://github.com/features/actions) [workflow](https://github.com/adwsingh/adwsingh.github.io/blob/master/.github/workflows/publish.yml)
-that I have defined it generates a static website and pushes to a `gh-pages` branch which configured to be used for
-Github Pages.
+that I have defined it automatically generates a static website on `git push` and pushes it to a `gh-pages` branch which
+configured to be used for Github Pages. So all I need to do it write down the next blog post and push it to my repo, and
+voilà the site automagically gets updated.
 
 That's it I guess. See you in the next post!
