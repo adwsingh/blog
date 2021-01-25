@@ -3,9 +3,9 @@ name: Publish site
 on:
   push:
     branches:
-      - master
-      paths-ignore:
-        - 'public/**'
+      - main
+    paths-ignore:
+      - 'public/**'
 
 jobs:
   build:
