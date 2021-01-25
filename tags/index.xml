@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on &lt;/adwsingh&gt;</title>
+    <link>http://adwsingh.github.io/tags/</link>
+    <description>Recent content in Tags on &lt;/adwsingh&gt;</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/adwsingh&#34;&gt;Adwait Kumar Singh&lt;/a&gt; 2021&lt;p&gt;&lt;small&gt;The opinions expressed on this website are my own,&lt;br&gt;and are not associated with any employers, past or present.&lt;/small&gt;</copyright>
+    <lastBuildDate>Sun, 24 Jan 2021 20:29:12 +0530</lastBuildDate><atom:link href="http://adwsingh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>introspection</title>
+      <link>http://adwsingh.github.io/tags/introspection/</link>
+      <pubDate>Sun, 24 Jan 2021 20:29:12 +0530</pubDate>
+      
+      <guid>http://adwsingh.github.io/tags/introspection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writing</title>
+      <link>http://adwsingh.github.io/tags/writing/</link>
+      <pubDate>Sun, 24 Jan 2021 20:29:12 +0530</pubDate>
+      
+      <guid>http://adwsingh.github.io/tags/writing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
