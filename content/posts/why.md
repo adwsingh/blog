@@ -36,15 +36,18 @@ I would not like to commit to a frequency but at the least I should be doing thi
 or others. I
 
 I also do not plan on promoting this blog publicly till a point where I feel I have added enough things for people to
-actually gain anything from reading this. However, this blog is available on the internet just in case some one
-finds something here that he was searching for.
+actually gain anything from reading this. However, this blog is available on the internet just in case some one finds
+something here that he was searching for.
 
 In case you are wondering how this blog is set up, I am using the amazing [Hugo](https://gohugo.io/) to generate a
 static website, which is hosted on [Github Pages](https://pages.github.com/). The theme
 is [Kiss](https://themes.gohugo.io/kiss/)
 which [I have forked out and modified](https://github.com/adwsingh/kiss/tree/personal) according to my requirements,
 some of which I think could be useful to others, will plan on creating a PR into the original repo also someday. I like
-this setup, it allows me to write blog posts in the ever favorite [Markdown](https://www.markdownguide.org/) and there
-is a cool [deploy script](https://github.com/adwsingh/blog/blob/master/deploy.sh) that generates the static website and pushes it to Github. Github Pages takes care of the rest.
+this setup, it allows me to write blog posts in the ever favorite [Markdown](https://www.markdownguide.org/) and then
+using
+a [Github Actions](https://github.com/features/actions) [workflow](https://github.com/adwsingh/adwsingh.github.io/blob/master/.github/workflows/publish.yml)
+that I have defined it generates a static website and pushes to a `gh-pages` branch which configured to be used for
+Github Pages.
 
 That's it I guess. See you in the next post!
