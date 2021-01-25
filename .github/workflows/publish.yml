@@ -1,36 +1,38 @@
-name: Publish site
+name: github pages
 
 on:
   push:
-    branches:
-      - master
-    paths-ignore:
-      - 'public/**'
+    branches: [ master ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Install hugo
-        env:
-          HUGO_VERSION: 0.80.0
-        run: |
-          echo "installing hugo"
-          sudo mkdir -p /home/hugo/
-          echo "curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar -zxf - --directory /home/hugo/"
-          curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz | tar -zxf - --directory /home/hugo/
-          sudo mv /home/hugo/hugo /usr/bin/
-      - name: Publish
-        run: |
-          echo $PWD
-          ls
-          export HUGO_ENV='production'
-          git submodule update --init --recursive
-          hugo -v
-          git config --global user.email "adwsingh-blog-bot@users.noreply.github.com"
-          git config --global user.name "adwsingh-blog-bot"
-          git add public
-          git add -u public
-          git commit -m "Publish: $(date)"
-          git push
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: Clean public directory
+        run: rm -rf public
+
+      - name: Build
+        run: hugo
+
+      - name: Create cname file
+        run: echo 'adwsingh.com' > public/CNAME
+
+      # Step 6 - Push our generated site to our gh-pages branch
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
